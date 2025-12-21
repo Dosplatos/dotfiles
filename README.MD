@@ -7,13 +7,14 @@ At the moment, this repo only tracks:
 - .bashrc
 - modular Bash configuration files under my .bashrc.d/
 
-The goal is **not** to impose a full environment, but to provide a clean structure that others can:
+The goal *currently* is **not** to impose a full environment, but to provide a clean structure that others can:
 
-This is primarily for myself to pull into work/other environments. With that said, you could just:
 
 - adopt this wholesale
 - selectively copy from and adapt to your own setup
 - *TODO: quickly get some essential (opinionated) packages installed*
+
+That said, this is primarily for myself to pull into work/other environments.
 
 ## Design
 
@@ -27,6 +28,7 @@ Each module is a small, focused shell script. A lot are just configurations that
 
 ### Module Layout + Order
 
+```
 .bashrc.d/
 ├── 20-colors.sh
 ├── 30-aliases.sh
@@ -34,6 +36,7 @@ Each module is a small, focused shell script. A lot are just configurations that
 ├── 50-paths.sh
 ├── 60-vi-mode.sh
 └── 70-ps1.sh
+```
 
 *The numbering matters*
 
