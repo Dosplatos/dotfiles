@@ -1,0 +1,31 @@
+[global]
+    monitor = 0
+    width = (0, 350)
+    height = (0, 400)
+    line_height = 0
+    separator_height = 5
+    origin = bottom-right
+    offset = 8x4
+    transparency = 0
+    frame_width = 2
+    frame_color = "#00000000"
+    font = ProFontWindows Nerd Font 12
+    corner_radius = 5
+    padding = 8
+    follow = mouse
+
+[urgency_low]
+    background = "#00000000"
+    foreground = "#EBC170"
+    frame_color = "#B8201A"
+
+[urgency_normal]
+    background = "#00000000"
+    foreground = "#EBC170"
+    frame_color = "#B8201A"
+
+[urgency_critical]
+    background = "#00000000"
+    foreground = "#1e93ed"
+    frame_color = "#EBC170"
+

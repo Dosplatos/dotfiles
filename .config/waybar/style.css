@@ -1,0 +1,200 @@
+@define-color bg #270c4c;
+@define-color bg-alt #2d234c;
+@define-color bg-alt-2 #1a152b;
+@define-color surface transparent;
+@define-color surface-alt #80a4ff;
+
+@define-color text #eee9ff;
+@define-color muted #b9b2d9;
+@define-color fg #7b6dce;
+@define-color yellow #f9ee1d;
+@define-color accent #a878ff;
+@define-color accent-alt #cbb1ff;
+@define-color urgent #ff6c93;
+@define-color arch-logo #1e93ed;
+
+@define-color wsPurp #020024;
+@define-color wsRed #790909;
+@define-color wsBlue #090979;
+@define-color wsOrange #D04133;
+
+/* Arc Raider Theme */
+@define-color arDarkOrange #B8201A;
+@define-color arRed #73191E;
+@define-color arMutedGreen #0C170E;
+@define-color arLightGreen #555C1E;
+@define-color arYellow #EBC170;
+
+/* waybar specific */
+@define-color wbArchLogo rgba(30, 147, 237, .5);
+@define-color wbDarkOrange rgba(184, 32, 26, .35);
+
+* {
+    font-family: "ProFontWindows Nerd Font", "Noto Sans";
+    font-size: 18px;
+    border: none;
+    box-shadow: none;
+}
+
+tooltip {
+    background-image: linear-gradient(to top, @arMutedGreen, transparent);
+    border-radius: 5px;
+    border: 2px solid @arDarkOrange;
+    color: @arYellow;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+#custom-logo {
+    color: @arch-logo;
+    background-image: linear-gradient(to left, @surface, alpha(@arch-logo, 0.10));
+    padding: 0px 10px;
+    margin: 0px;
+    border-left: 2px solid @arDarkOrange;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0px;
+}
+
+#workspaces {
+    margin: 0px;
+    border-left: none;
+    padding: 4px 8px;
+    background-image: radial-gradient(circle, alpha(@arDarkOrange, 0.45), @surface);
+    border-top: 2px solid @arDarkOrange;
+    border-top-right-radius: 0px;
+    border-bottom: 2px solid @arDarkOrange;
+}
+
+#workspaces button {
+    margin: 0px 4px;
+    padding: 0px 14px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: @arYellow;
+
+    font-size: 100%;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background-color: @arRed;
+    color: @arch-logo;
+}
+
+#workspaces button.urgent {
+    background-color: @urgent;
+    color: @bg;
+}
+
+#workspaces button:hover {
+    background-color: @arLightGreen;
+    color: @arch-logo;
+}
+
+/* Secondary bar, second clock HDMI-A-1 (portrait monitor: left of primary) */
+#clock.clock2 {
+    color: @wbArchLogo;
+    border: 2px solid @wbDarkOrange;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+/* Primary bar, first clock DP-3 (primary monitor) */
+#clock.clock1 {
+    color: @arch-logo;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-right: 2px solid @arDarkOrange;
+    padding: 0px 10px 0px 5px;
+    margin: 0px;
+    background-image: linear-gradient(to right, @surface, alpha(@arch-logo, 0.10));
+}
+
+#window {
+    color: @arYellow;
+    border: 2px solid @arDarkOrange;
+    padding: 0px 8px;
+    border-radius: 5px;
+}
+
+window#waybar.empty #window {
+    border: none;
+    background-color: @surface;
+}
+
+#cpu {
+    font-size: 16;
+    background-color: @surface;
+    padding: 0px 10px;
+    margin: 0px 0px 0px 4px;
+    color: @arYellow;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+    border-left: 2px solid @arDarkOrange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#memory {
+    font-size: 16;
+    background: @surface;
+    padding: 0px 10px;
+    color: @arYellow;
+    margin: 0px;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+}
+
+#pulseaudio {
+    font-size: 16;
+    background: @surface;
+    padding: 0px 10px;
+    color: @arYellow;
+    margin: 0px;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+}
+
+#pulseaudio.muted {
+    color: @arch-logo;
+}
+
+#tray {
+    font-size: 16;
+    background: @surface;
+    padding: 0px 10px;
+    margin: 0px;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+}
+
+#tray>.passive {
+    opacity: 0.6;
+}
+
+#tray>.needs-attention {
+    background: @urgent;
+    color: @arYellow;
+    border-radius: 999px;
+}
+
+#custom-power {
+    color: @arch-logo;
+    padding: 0px 10px 0px 4px;
+    margin: 0px 4px 0px 0px;
+    border-top: 2px solid @arDarkOrange;
+    border-bottom: 2px solid @arDarkOrange;
+    border-right: 2px solid @arDarkOrange;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
