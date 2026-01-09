@@ -6,11 +6,12 @@ At the moment, this repo only tracks:
 
 - .bashrc
 - modular Bash configuration files under my .bashrc.d/
+- hyprland DE .conf files
 
 The goal *currently* is **not** to impose a full environment, but to provide a clean structure that others can:
 
 
-- adopt this wholesale
+- adopt/cherry pick what is needed
 - selectively copy from and adapt to your own setup
 - *TODO: quickly get some essential (opinionated) packages installed*
 
@@ -54,4 +55,10 @@ If you keep the numeric prefixes as-is, everything should load just fine.
 If you want to use this as is, just make a backup of your current .bashrc just in case:
 
 `mv ~/.bashrc ~/.bashrc.bak`
+
+### hyprland
+
+These definitely cannot be adopted as-is. The monitors are set up for a single setup. Config files for this are separated by concerns, so you would need to go into each and edit/remove the configs that would not work in your environment. [See the hyprland wiki](https://wiki.hypr.land/0.53.0/Getting-Started/) for how to get this set up.
+
+Syntax is using the latest release of 0.53.0 for Jan 2026, and updated per-release (never latest-git).
 
