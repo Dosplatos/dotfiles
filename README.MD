@@ -58,7 +58,7 @@ If you want to use this as is, just make a backup of your current .bashrc just i
 
 ### hyprland
 
-These definitely cannot be adopted as-is. The monitors are set up for a single setup. Config files for this are separated by concerns, so you would need to go into each and edit/remove the configs that would not work in your environment. [See the hyprland wiki](https://wiki.hypr.land/0.53.0/Getting-Started/) for how to get this set up.
+These definitely cannot be adopted as-is. For example, the monitor settings only work for a couple specific workstations that match the hardware, resolution, and physical layout. Config files for this are separated by concerns, so you would need to go into each and edit/remove the configs that would not work in your environment. [See the hyprland wiki](https://wiki.hypr.land/0.53.0/Getting-Started/) for how to get this set up.
 
 Syntax is using the latest release of 0.53.0 for Jan 2026, and updated per-release (never latest-git).
 
